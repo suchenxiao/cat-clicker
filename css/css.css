@@ -1,0 +1,21 @@
+html,body{ margin: 0; padding:0; width:100%; height:100%; overflow:hidden;}
+
+.nav{ display:inline-block; width:15%; height:100%; background:#333; color:#fff; padding:20px; vertical-align:top; list-style:none; margin:0;}
+.nav li{ cursor:pointer; margin:0; padding:10px;}
+.nav li:hover{ background:#000;}
+
+.con{ display:inline-block; vertical-align:top;width:400px; height:400px; overflow:hidden; margin:20px; text-align:center; background:#eee; padding:20px;}
+.con p.name{ font-size:24px;}
+.con p.counter{ color:#999;}
+.con p.counter:before{ content:'[ ';}
+.con p.counter:after{ content:' ]';}
+.con img{ width:100%;}
+
+.admin{display:inline-block; vertical-align:top;width:200px; height:400px; overflow:hidden; margin:20px; text-align:center; background:#eee; padding:20px; transition:all ease 1s;}
+.admin.btn{ height:80px;background:#F96; }
+.admin h3 { padding:20px; margin-top:0; margin-bottom:40px; border-bottom:1px solid #666; }
+.admin.btn h3{ border-bottom:0;cursor:pointer;}
+.admin p { text-align:left;}
+.admin p span{ display:block;}
+.admin p input{ }
+.admin a{ display:inline-block; border:1px solid #333; margin:10px; padding:10px; cursor:pointer;}
