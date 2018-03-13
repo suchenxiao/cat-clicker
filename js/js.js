@@ -15,6 +15,8 @@ $(function(){
 			else if(this.clickCount()<=20) return 'LEVEL-4';
 			else return 'LEVEL-5';
 		}, this);
+
+		this.nickname = ko.observableArray(['Jan', 'Feb', 'Mar', 'etc']);
 	}
 	
 	ko.applyBindings(new ViewModel());

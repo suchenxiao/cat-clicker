@@ -19,6 +19,12 @@
         <div data-bind="text: level"></div>
         <div data-bind="text: clickCount"></div>
         <img src="" alt="cute cat" data-bind="click: incrementCounter, attr:{src: imgSrc}">
+        <div class="nickname">
+            <p>Nicknames:</p>
+            <ul data-bind="foreach: nickname">
+                <li data-bind="text: $data"></li>
+            </ul>
+        </div>
     </div>
     <!--
     <div class="admin btn">
