@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <!--
-    <ul class="nav">
+
+    <ul class="nav" data-bind="with: currentCat">
     </ul>
-    -->
+
     <div class="con" data-bind="with: currentCat">
         <h2 data-bind="text: name"></h2>
         <div data-bind="text: level"></div>
