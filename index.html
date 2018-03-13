@@ -11,7 +11,8 @@
 
 <body>
 
-    <ul class="nav" data-bind="with: currentCat">
+    <ul class="nav" data-bind="foreach: catList">
+    	<li data-bind="text: $data.name, click: $parent.setCat"></li>
     </ul>
 
     <div class="con" data-bind="with: currentCat">
