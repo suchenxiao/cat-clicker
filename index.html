@@ -15,13 +15,13 @@
     </ul>
     -->
     <div class="con">
-        <h2 data-bind="text: name"></h2>
-        <div data-bind="text: level"></div>
-        <div data-bind="text: clickCount"></div>
-        <img src="" alt="cute cat" data-bind="click: incrementCounter, attr:{src: imgSrc}">
+        <h2 data-bind="text: currentCat().name"></h2>
+        <div data-bind="text: currentCat().level"></div>
+        <div data-bind="text: currentCat().clickCount"></div>
+        <img src="" alt="cute cat" data-bind="click: incrementCounter, attr:{src: currentCat().imgSrc}">
         <div class="nickname">
             <p>Nicknames:</p>
-            <ul data-bind="foreach: nickname">
+            <ul data-bind="foreach: currentCat().nickname">
                 <li data-bind="text: $data"></li>
             </ul>
         </div>

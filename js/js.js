@@ -1,12 +1,8 @@
 $(function(){
-	var ViewModel = function() {
+	var Cat = function() {
 		this.clickCount = ko.observable(0);
 		this.name = ko.observable('Tabby');
 		this.imgSrc = ko.observable('images/cat_1.jpg');
-		
-		this.incrementCounter = function() {
-			this.clickCount(this.clickCount()+1);
-		};
 
 		this.level = ko.computed(function(){
 			if(this.clickCount()<=5) return 'LEVEL-1';
@@ -17,7 +13,15 @@ $(function(){
 		}, this);
 
 		this.nickname = ko.observableArray(['Jan', 'Feb', 'Mar', 'etc']);
-	}
+	};
+
+	var ViewModel = function() {
+		this.currentCat = ko.observable(new Cat());
+		this.incrementCounter = function() {
+			this.currentCat().clickCount(this.currentCat().	clickCount()+1);
+		};
+
+	};
 	
 	ko.applyBindings(new ViewModel());
 });
